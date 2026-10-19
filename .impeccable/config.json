@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "zero-offset text-shadow glow (#0d2152)",
+        "createdAt": "2026-10-19T21:40:19.979Z",
+        "reason": "pitch-site finishing-rules.md requires a soft glow in the ground color so the wall's scuffs and cracks never run through hero text; it is the wall's own navy, not a chromatic accent"
+      }
+    ]
+  }
+}

@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diogo's Handy Services · Handyman in Clark &amp; Union County, NJ</title>
+<meta name="description" content="Small repairs. A big difference. Drywall patching, painting touch-ups, mounting, furniture assembly, door, faucet and toilet repairs in Clark and Union County, NJ. Call or text 908-764-8253.">
+<meta name="theme-color" content="#0d2152">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Diogo's Handy Services">
+<meta property="og:description" content="Small repairs. A big difference. Text me a photo of the job: 908-764-8253.">
+<meta property="og:url" content="https://10elizabethbell.github.io/diogoHandyServices/">
+<meta property="og:image" content="https://10elizabethbell.github.io/diogoHandyServices/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" href="img/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --navy:#0d2152;        /* logo ground */
+  --navy-deep:#0a1a44;
+  --wall-old:#15295a;    /* the scuffed wall */
+  --royal:#1d46b3;       /* the fresh coat = services band */
+  --bright:#2a7bff;      /* logo blue; form outline accent */
+  --gold:#ffc21a;        /* logo window */
+  --gold-deep:#e0a400;
+  --primer:#eef2fb;      /* fresh white wall */
+  --primer-ink:#0d2152;
+  --primer-soft:#3a4c7a;
+  --white:#f5f8ff;
+  --mist:#c9d5f2;        /* secondary text on blue */
+  --pad:clamp(16px,5vw,64px);
+  --max:1160px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scrollbar-color:var(--royal) var(--navy-deep)}
+body{margin:0;background:var(--navy);color:var(--white);font:400 17px/1.55 var(--font);overflow-x:hidden}
+::selection{background:var(--gold);color:var(--navy)}
+img{max-width:100%;display:block}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.98;margin:0;text-wrap:balance}
+h2{font-size:clamp(2rem,8vw,3.5rem)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:56px;padding:0 22px;border-radius:12px;border:2px solid transparent;font:800 1.0625rem/1 var(--font);text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s,transform .12s}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-gold{background:var(--gold);color:var(--navy);border-color:var(--gold);box-shadow:0 6px 16px -6px rgba(2,8,24,.5)}
+.btn-gold:hover{background:#ffd04d;border-color:#ffd04d}
+.btn-line{background:transparent;color:var(--white);border-color:rgba(245,248,255,.85)}
+.btn-line:hover{background:rgba(245,248,255,.1);border-color:var(--white)}
+
+/* ---------- the wall (header + hero) ---------- */
+.wall{position:relative;min-height:min(100svh,940px);background:var(--wall-old);display:flex;flex-direction:column;isolation:isolate}
+#wallCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;touch-action:none;-webkit-user-select:none;user-select:none;cursor:none}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px var(--pad) 0;max-width:calc(var(--max) + 2*var(--pad));width:100%;margin:0 auto}
+.bar img{height:64px;width:auto}
+.tel{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 4px;font-weight:800;font-size:1.0625rem;text-decoration:none;white-space:nowrap;text-shadow:0 0 12px var(--navy)}
+.tel svg{width:20px;height:20px;color:var(--gold);flex:none}
+.tel:hover{text-decoration:underline}
+.hero{width:100%;max-width:calc(var(--max) + 2*var(--pad));margin:0 auto;padding:clamp(28px,6vh,64px) var(--pad) 0}
+.hero-copy{max-width:640px;text-shadow:0 0 22px var(--navy),0 0 4px rgba(13,33,82,.6)}
+.hero h1{font-size:clamp(2.75rem,11.6vw,6rem);letter-spacing:-.03em}
+.hero h1 span{color:var(--gold);display:block}
+.promise{margin:18px 0 0;font-size:clamp(1.0625rem,4.4vw,1.25rem);max-width:30em;color:var(--white)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.actions .btn{flex:1 1 220px;text-shadow:none}
+.wall-room{flex:1;min-height:170px}
+
+/* ---------- roller dividers ---------- */
+.edge{position:relative;height:30px;margin-top:-29px;pointer-events:none;z-index:2}
+.edge svg.paint{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible}
+.js .edge svg.paint{clip-path:inset(0 100% 0 0)}
+.js .edge.on svg.paint{clip-path:inset(0 0 0 0);transition:clip-path 1.25s cubic-bezier(.22,.8,.3,1)}
+.edge .roll{position:absolute;left:0;bottom:2px;width:40px;height:62px;opacity:0;transform:translateX(-50px)}
+.js .edge.on .roll{animation:rollby 1.25s cubic-bezier(.22,.8,.3,1) forwards}
+@keyframes rollby{0%{opacity:1;transform:translateX(-20px)}85%{opacity:1}100%{opacity:0;transform:translateX(var(--run,100vw))}}
+
+/* ---------- services ---------- */
+.services{background:var(--royal);padding:56px 0 64px}
+.services .lede{margin:12px 0 28px;color:var(--mist);max-width:34em}
+.jobs{list-style:none;margin:0;padding:0;display:grid;gap:0 40px}
+.jobs a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:10px 0;border-bottom:1px solid rgba(245,248,255,.18);text-decoration:none;font-weight:800;font-size:1.1875rem;line-height:1.3}
+.jobs li:first-child a{border-top:1px solid rgba(245,248,255,.18)}
+.arrow{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:rgba(245,248,255,.14);transition:background-color .18s,color .18s}
+.arrow svg{width:20px;height:20px}
+.jobs a:hover,.jobs a:focus-visible{outline:none;background:none;box-shadow:none}
+.jobs a:hover .arrow,.jobs a:focus-visible .arrow{background:var(--gold);color:var(--navy)}
+.jobs a:focus-visible .arrow{outline:3px solid var(--gold);outline-offset:3px}
+
+/* ---------- how it works ---------- */
+.how{background:var(--primer);color:var(--primer-ink);padding:60px 0 72px}
+.steps{list-style:none;margin:32px 0 0;padding:0;display:grid;gap:8px}
+.steps li{display:grid;grid-template-columns:72px 1fr;gap:4px 16px;align-items:start}
+.num{font-weight:900;font-size:4.5rem;line-height:.8;color:var(--royal);letter-spacing:-.04em;grid-row:span 2}
+.steps h3{font-size:1.375rem;letter-spacing:-.01em;line-height:1.1;padding-top:4px}
+.steps p{margin:6px 0 0;color:var(--primer-soft)}
+.steps .go{grid-column:1/-1;width:72px;display:grid;place-items:center;color:var(--royal);opacity:.55;padding:6px 0}
+.steps .go svg{width:28px;height:28px;transform:rotate(90deg)}
+
+/* ---------- the work ---------- */
+.work{background:var(--navy);padding:60px 0 72px}
+.work p{margin:14px 0 0;max-width:34em;color:var(--mist);font-size:1.125rem}
+.fb{margin-top:28px;display:flex;align-items:center;gap:16px;min-height:76px;padding:14px 18px 14px 14px;border-radius:16px;background:var(--white);color:var(--navy);text-decoration:none;font-weight:900;font-size:1.1875rem;line-height:1.3;max-width:560px;box-shadow:0 14px 32px -16px rgba(0,0,0,.55);transition:transform .15s}
+.fb:hover{transform:translateY(-2px)}
+.fb .ficon{flex:none;width:48px;height:48px;border-radius:12px;background:#1877f2;display:grid;place-items:center;color:#fff}
+.fb .ficon svg{width:26px;height:26px}
+.fb .txt{flex:1}
+.fb .txt small{display:block;font-weight:600;font-size:.9375rem;color:var(--primer-soft);margin-top:4px}
+.fb .arrow{background:var(--primer);color:var(--navy)}
+.fb:hover .arrow{background:var(--gold)}
+
+/* ---------- quote form ---------- */
+.quote{background:var(--primer);color:var(--primer-ink);padding:60px 0 72px}
+.quote .lede{margin:12px 0 0;color:var(--primer-soft);max-width:34em}
+form{margin-top:28px;display:grid;gap:22px;max-width:720px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend,label.lab{display:block;font-weight:800;font-size:1.0625rem;margin-bottom:10px;padding:0}
+.opt{font-weight:500;color:var(--primer-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 14px;border-radius:10px;background:#fff;border:2px solid #cfd8ee;font-weight:700;font-size:.9688rem;line-height:1.3;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
+.chip span svg{width:16px;height:16px;display:none}
+.chip input:checked + span{background:var(--royal);border-color:var(--royal);color:#fff}
+.chip input:checked + span svg{display:block}
+.chip:hover span{border-color:var(--bright);outline:2px solid var(--bright);outline-offset:1px}
+.chip input:focus-visible + span{outline:3px solid var(--bright);outline-offset:2px;border-color:var(--bright)}
+input[type=text],textarea{width:100%;font:500 1.0625rem/1.4 var(--font);color:var(--primer-ink);background:#fff;border:2px solid #cfd8ee;border-radius:10px;padding:13px 14px;min-height:52px;caret-color:var(--royal);transition:border-color .15s}
+textarea{min-height:110px;resize:vertical}
+input[type=text]::placeholder,textarea::placeholder{color:#5d6b8f}
+input[type=text]:hover,textarea:hover{border-color:var(--bright);outline:2px solid var(--bright);outline-offset:1px}
+input[type=text]:focus,textarea:focus{outline:3px solid var(--bright);outline-offset:1px;border-color:var(--bright)}
+.row2{display:grid;gap:22px}
+.err{display:none;margin:8px 0 0;color:#b3261e;font-weight:700;font-size:.9688rem}
+.bad .err{display:block}
+.bad input[type=text],.bad .chip span{border-color:#b3261e}
+form .btn-gold{width:100%;box-shadow:none}
+form .btn-gold:hover,form .btn-gold:focus-visible{outline:3px solid var(--bright);outline-offset:2px}
+.sent{display:none;margin-top:8px;padding:18px;border-radius:14px;background:#fff;border:2px solid #cfd8ee;max-width:720px}
+.sent.show{display:block}
+.sent p{margin:0 0 10px}
+.sent pre{margin:0 0 14px;white-space:pre-wrap;font:500 1rem/1.5 var(--font);background:var(--primer);padding:12px 14px;border-radius:10px}
+.sent .btns{display:flex;flex-wrap:wrap;gap:10px}
+.sent .btn{min-height:48px;font-size:1rem;flex:1 1 160px}
+.btn-plain{background:#fff;color:var(--primer-ink);border-color:#cfd8ee}
+.btn-plain:hover,.btn-plain:focus-visible{outline:3px solid var(--bright);outline-offset:1px;border-color:var(--bright)}
+
+/* ---------- close + footer ---------- */
+.close{background:var(--navy-deep);padding:64px 0 48px;text-align:center}
+.close img{width:min(320px,78vw);height:auto;margin:0 auto}
+.close h2{margin-top:28px;font-size:clamp(2.4rem,10vw,4.5rem)}
+.close .rad{margin:14px 0 0;color:var(--gold);font-weight:900;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(1rem,4.2vw,1.25rem)}
+.close .area{margin:10px 0 0;color:var(--mist)}
+.close .btn{margin-top:28px;width:min(100%,360px)}
+.close .or{margin:16px 0 0;color:var(--mist)}
+.close .or a{color:var(--white);font-weight:800}
+footer{background:var(--navy-deep);border-top:1px solid rgba(245,248,255,.12);padding:22px 0 calc(22px + env(safe-area-inset-bottom));color:var(--mist);font-size:.9375rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:space-between;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--white);font-weight:700;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* ---------- wider screens ---------- */
+@media (min-width:700px){
+  .bar img{height:76px}
+  .jobs{grid-template-columns:1fr 1fr}
+  .jobs li:nth-child(2) a{border-top:1px solid rgba(245,248,255,.18)}
+  .row2{grid-template-columns:1fr 1fr}
+}
+@media (min-width:1024px){
+  .bar{padding-top:18px}
+  .hero{padding-top:clamp(48px,10vh,120px)}
+  .hero-copy{max-width:600px}
+  .actions .btn{flex:0 0 auto;min-width:210px}
+  .steps{grid-template-columns:1fr auto 1fr auto 1fr;gap:0 20px;align-items:start}
+  .steps li{grid-template-columns:1fr;gap:10px}
+  .steps li.go-li{align-self:center}
+  .steps .go{width:auto;padding:0}
+  .steps .go svg{transform:none}
+  .num{font-size:6rem;grid-row:auto}
+  .work .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end}
+  .fb{margin-top:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .js .edge svg.paint{clip-path:none}
+}
+</style>
+</head>
+<body>
+<!--
+THESIS: Diogo fixes the little things, so the first screen IS a little thing to fix: his own navy wall, scuffed, cracked and holed, with a paint roller laying a fresh coat. Refuses the category default of a toolbox stock photo over a "Call now" banner.
+OWN-WORLD: Logo navy wall (#15295a, scuffs, nail holes, a doorknob hole, a picture-frame ghost), fresh royal coat (#1d46b3) that becomes the services band, primer white (#eef2fb) bands, logo gold (#ffc21a) for the window, the roller grip and the primary button. Heavy uppercase system sans. Section edges are ragged roller edges laid by a roller pass.
+STORY: Visitor sees his promise, watches a wall get fixed, taps a job or texts a photo, and Diogo answers with a price.
+FIRST VIEWPORT: logo top-left, 908-764-8253 top-right; "Small repairs. A big difference." huge, promise line, gold "Text me a photo" + outlined "Ask for a price"; under them the wall, where the roller works until your finger or mouse takes it.
+FORM: paint roller on a scuffed wall, own list #4 (seed 7ccae456). Raises: brick-instructions (big step numerals, wordless arrows); cyclorama (color owns whole bands, navy to royal to primer).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<div class="wall" id="top">
+  <canvas id="wallCanvas" aria-hidden="true"></canvas>
+  <header class="bar">
+    <a href="#top" aria-label="Diogo's Handy Services, back to top"><img src="img/logo.webp" width="560" height="368" alt="Diogo's Handy Services"></a>
+    <a class="tel" href="tel:+19087648253"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>908-764-8253</a>
+  </header>
+  <section class="hero" aria-labelledby="h1">
+    <div class="hero-copy">
+      <h1 id="h1">Small repairs. <span>A big difference.</span></h1>
+      <p class="promise">The little things you keep putting off, fixed with the same care I'd give my own home.</p>
+      <div class="actions">
+        <a class="btn btn-gold" id="heroText" href="sms:+19087648253?&amp;body=Hi%20Diogo!%20I%27d%20like%20a%20price%20on%20a%20repair.%20Here%27s%20a%20photo%3A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.8l1.4-2h4.6l1.4 2h1.8A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z"/><circle cx="12" cy="12.5" r="3.4"/></svg>Text me a photo</a>
+        <a class="btn btn-line" href="#quote">Ask for a price</a>
+      </div>
+    </div>
+  </section>
+  <div class="wall-room" aria-hidden="true"></div>
+</div>
+
+<div class="edge" data-color="#1d46b3" data-under="#15295a" aria-hidden="true"></div>
+<section class="services" aria-labelledby="h-jobs">
+  <div class="wrap">
+    <h2 id="h-jobs">How can I help?</h2>
+    <p class="lede">Tap a job to text me about it, and I'll get back to you with a price.</p>
+    <ul class="jobs" id="jobs"></ul>
+  </div>
+</section>
+
+<div class="edge" data-color="#eef2fb" data-under="#1d46b3" aria-hidden="true"></div>
+<section class="how" aria-labelledby="h-how">
+  <div class="wrap">
+    <h2 id="h-how">How it works</h2>
+    <ol class="steps">
+      <li><span class="num" aria-hidden="true">1</span><h3>Text me a photo</h3><p>Snap the repair you keep putting off and send it to <span style="white-space:nowrap">908-764-8253</span>.</p></li>
+      <li class="go-li" aria-hidden="true"><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></li>
+      <li><span class="num" aria-hidden="true">2</span><h3>I send you a price</h3><p>You know what it costs before I pick up a tool.</p></li>
+      <li class="go-li" aria-hidden="true"><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></li>
+      <li><span class="num" aria-hidden="true">3</span><h3>Checked off your list</h3><p>I come out, fix it right, and treat your home like it's mine.</p></li>
+    </ol>
+  </div>
+</section>
+
+<div class="edge" data-color="#0d2152" data-under="#eef2fb" aria-hidden="true"></div>
+<section class="work" aria-labelledby="h-work">
+  <div class="wrap">
+    <div>
+      <h2 id="h-work">Before &amp; after</h2>
+      <p>Damaged tile, wall touch-ups, fresh bathroom caulking and the finishing details.</p>
+    </div>
+    <a class="fb" href="https://www.facebook.com/profile.php?id=61591872657813">
+      <span class="ficon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.87.25-1.46 1.5-1.46h1.6V4.35A21 21 0 0 0 14.3 4.2c-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z"/></svg></span>
+      <span class="txt">Click to see more of my work.<small>Before-and-after photos on my Facebook</small></span>
+      <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 6l6 6-6 6"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<div class="edge" data-color="#eef2fb" data-under="#0d2152" aria-hidden="true"></div>
+<section class="quote" id="quote" aria-labelledby="h-quote">
+  <div class="wrap">
+    <h2 id="h-quote">Ask for a price</h2>
+    <p class="lede">Fill this in and it turns into a text to me. Add your photos before you hit send.</p>
+    <form id="quoteForm" novalidate>
+      <fieldset id="f-jobs">
+        <legend>What needs fixing?</legend>
+        <div class="chips" id="chips"></div>
+        <p class="err" id="e-jobs">Pick a job above, or tell me about it below.</p>
+      </fieldset>
+      <div>
+        <label class="lab" for="f-detail">Tell me about it <span class="opt">(optional)</span></label>
+        <textarea id="f-detail" name="detail" placeholder="Which room, how big, anything I should know"></textarea>
+      </div>
+      <div class="row2">
+        <div id="w-town">
+          <label class="lab" for="f-town">Your town</label>
+          <input type="text" id="f-town" name="town" autocomplete="address-level2" placeholder="Clark">
+          <p class="err" id="e-town">Add your town so I know where the job is.</p>
+        </div>
+        <div>
+          <label class="lab" for="f-name">Your name <span class="opt">(optional)</span></label>
+          <input type="text" id="f-name" name="name" autocomplete="given-name">
+        </div>
+      </div>
+      <button class="btn btn-gold" type="submit">Write my text to Diogo</button>
+    </form>
+    <div class="sent" id="sent" role="status">
+      <p><strong>Your messages app should open with this.</strong> Attach your photos, then send.</p>
+      <pre id="msg"></pre>
+      <div class="btns">
+        <a class="btn btn-gold" id="sendAgain" href="#">Open my messages</a>
+        <button class="btn btn-plain" type="button" id="copy">Copy the text</button>
+      </div>
+      <p style="margin:12px 0 0">On a computer? Text it to <a href="tel:+19087648253"><strong>908-764-8253</strong></a>.</p>
+    </div>
+  </div>
+</section>
+
+<div class="edge" data-color="#0a1a44" data-under="#eef2fb" aria-hidden="true"></div>
+<section class="close" aria-labelledby="h-close">
+  <div class="wrap">
+    <img src="img/logo.webp" width="560" height="368" alt="" loading="lazy">
+    <h2 id="h-close">Your home. My care.</h2>
+    <p class="rad">Reliable. Affordable. Done right.</p>
+    <p class="area">Based in Clark, serving Union County, NJ.</p>
+    <a class="btn btn-gold" href="sms:+19087648253?&amp;body=Hi%20Diogo!%20I%27d%20like%20a%20price%20on%20a%20repair.%20Here%27s%20a%20photo%3A"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.8l1.4-2h4.6l1.4 2h1.8A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z"/><circle cx="12" cy="12.5" r="3.4"/></svg>Text me a photo</a>
+    <p class="or">or call <a href="tel:+19087648253">908-764-8253</a></p>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Diogo's Handy Services · Clark, NJ</span>
+    <nav aria-label="Contact">
+      <a href="tel:+19087648253">908-764-8253</a>
+      <a href="https://www.facebook.com/profile.php?id=61591872657813">Facebook</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+var PHONE = '+19087648253';
+var SERVICES = ['Minor Home Repairs','Fixtures & Installations','Drywall Repair & Patching','Hanging & Mounting','Furniture Assembly','Painting & Touch-Ups','Door & Trim Repairs','Blind & Curtain Installation','Faucet & Toilet Repairs'];
+function smsHref(body){ return 'sms:' + PHONE + '?&body=' + encodeURIComponent(body); }
+var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- services list: each row texts Diogo about that job ---------- */
+(function(){
+  var ul = document.getElementById('jobs');
+  var arrow = '<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 6l6 6-6 6"/></svg></span>';
+  ul.innerHTML = SERVICES.map(function(s){
+    var body = "Hi Diogo! I'd like a price on " + s.toLowerCase() + ". Here's a photo:";
+    return '<li><a href="' + smsHref(body).replace(/&/g,'&amp;') + '"><span>' + s.replace(/&/g,'&amp;') + '</span>' + arrow + '</a></li>';
+  }).join('');
+})();
+
+/* ---------- the wall: scuffed old coat, a roller lays a fresh one ---------- */
+(function(){
+  // tunables
+  var OLD = '#15295a', FRESH = '#1d46b3';
+  var ROLLER_L_PHONE = 74, ROLLER_L_DESK = 104;   // roller cover length (css px)
+  var STAMP_ALPHA = 0.5;      // paint laid per pass (coats build up)
+  var AUTO_DELAY = 2600;      // ms after last touch before the roller works by itself
+  var AUTO_SPEED = 1.0;       // autoplay pace
+  var REGROW_DELAY = 5000;    // ms idle before old wall shows through again
+  var REGROW_STEP = 0.06, REGROW_EVERY = 15; // fade fresh paint by 6% every 15 frames
+  var DRIP_CHANCE = 0.018, MAX_DRIPS = 14;
+  var DPR_CAP = 1.5;
+
+  var wall = document.querySelector('.wall');
+  var cv = document.getElementById('wallCanvas');
+  var ctx = cv.getContext('2d');
+  var base, fresh, mask, tmp, mctx, tctx, stamps = [];
+  var W = 0, H = 0, D = 1, L = 90, T = 8, zone = {x:0,y:0,w:1,h:1};
+  var roller = {x:0, y:0, ang:0, px:null, py:null};
+  var input = {on:false, cx:0, cy:0, kind:''}, lastInput = -1e9, frame = 0, drips = [];
+  var visible = true, running = false, t0 = performance.now();
+
+  function rng(seed){ return function(){ seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function mk(w,h){ var c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+
+  function rectsToAvoid(){
+    var r0 = cv.getBoundingClientRect(), out = [];
+    document.querySelectorAll('.wall .bar, .wall .hero-copy').forEach(function(el){
+      var r = el.getBoundingClientRect();
+      out.push({x:r.left - r0.left - 14, y:r.top - r0.top - 14, w:r.width + 28, h:r.height + 28});
+    });
+    return out;
+  }
+  function clear(x,y,rad,av){ for (var i=0;i<av.length;i++){ var a=av[i]; if (x+rad>a.x && x-rad<a.x+a.w && y+rad>a.y && y-rad<a.y+a.h) return false; } return x>rad && y>rad && x<W-rad && y<H-rad; }
+  function spot(R, rad, av, zoneFirst){
+    for (var i=0;i<40;i++){
+      var x, y;
+      if (zoneFirst && i < 30){ x = zone.x + R()*zone.w; y = zone.y + R()*zone.h; }
+      else { x = R()*W; y = R()*H; }
+      if (clear(x,y,rad,av)) return [x,y];
+    }
+    return null;
+  }
+  function noise(c, amp, R){
+    var g = c.getContext('2d'), id = g.getImageData(0,0,c.width,c.height), d = id.data;
+    for (var i=0;i<d.length;i+=4){ var n = (R()-.5)*amp; d[i]+=n; d[i+1]+=n; d[i+2]+=n*1.2; }
+    g.putImageData(id,0,0);
+  }
+  function crack(g, R, x, y, ang, len, depth){
+    var pts = [[x,y]], cx = x, cy = y;
+    while (len > 0){
+      var s = 3 + R()*6; ang += (R()-.5)*0.9; cx += Math.cos(ang)*s; cy += Math.sin(ang)*s; len -= s; pts.push([cx,cy]);
+      if (depth < 2 && R() < 0.07) crack(g, R, cx, cy, ang + (R()<.5?-1:1)*(0.5+R()*0.6), len*0.5, depth+1);
+    }
+    [['rgba(4,10,28,.75)',2.2,0.7],['rgba(150,165,205,.55)',1,0]].forEach(function(st){
+      g.strokeStyle = st[0]; g.lineWidth = st[1] * (depth ? .7 : 1); g.beginPath();
+      pts.forEach(function(p,i){ g[i?'lineTo':'moveTo'](p[0]+st[2], p[1]+st[2]); }); g.stroke();
+    });
+  }
+  function nailHole(g,x,y,s){
+    g.fillStyle = 'rgba(150,165,200,.32)'; g.beginPath(); g.arc(x+.6,y+.7,2*s,0,7); g.fill();   // lit lower lip
+    g.fillStyle = 'rgba(3,8,24,.85)'; g.beginPath(); g.arc(x,y,1.5*s,0,7); g.fill();
+  }
+  function knobHole(g, R, x, y, r){
+    // a doorknob hole: jagged outline, crumbly gypsum edge, dark cavity, paper face torn back
+    var n = 26, outer = [], inner = [], wob = 0;
+    for (var i=0;i<n;i++){
+      var a = i/n*Math.PI*2; wob += (R()-.5)*.35; wob *= .7;
+      var ro = r*(1 + wob + (R()-.5)*.22) * (1 + .12*Math.cos(a*2 + 1));
+      outer.push([x+Math.cos(a)*ro, y+Math.sin(a)*ro*.92]);
+      var ri = ro - (2.5 + R()*3.5);
+      inner.push([x+Math.cos(a)*ri + 1.2, y+Math.sin(a)*ri*.92 + 1.6]);
+    }
+    function poly(p){ g.beginPath(); p.forEach(function(q,i){ g[i?'lineTo':'moveTo'](q[0],q[1]); }); g.closePath(); }
+    // torn paper flaps just outside the edge, a little lighter than the paint
+    g.fillStyle = 'rgba(120,140,190,.28)';
+    for (var f=0;f<5;f++){ var fa = R()*7, fr = r*1.02; g.beginPath(); g.moveTo(x+Math.cos(fa-.18)*fr, y+Math.sin(fa-.18)*fr); g.lineTo(x+Math.cos(fa)*(fr+4+R()*5), y+Math.sin(fa)*(fr+4+R()*5)); g.lineTo(x+Math.cos(fa+.2)*fr, y+Math.sin(fa+.2)*fr); g.fill(); }
+    var gy = g.createLinearGradient(x-r, y-r, x+r, y+r); gy.addColorStop(0,'#d8d2c4'); gy.addColorStop(1,'#9d988c');
+    poly(outer); g.fillStyle = gy; g.fill();                               // gypsum core showing at the break
+    var gc = g.createRadialGradient(x + r*.15, y + r*.25, r*.1, x, y, r);
+    gc.addColorStop(0, '#2b2a2c'); gc.addColorStop(.7, '#151619'); gc.addColorStop(1, '#0c0d12');
+    poly(inner); g.fillStyle = gc; g.fill();                               // the cavity behind the wall
+    g.fillStyle = 'rgba(225,218,200,.55)';
+    for (var k=0;k<22;k++){ var a2 = R()*7, rr = r*(.9+R()*.25); g.fillRect(x+Math.cos(a2)*rr, y+Math.sin(a2)*rr*.92, 1+R()*1.6, 1+R()*1.6); }
+    g.fillStyle = 'rgba(210,205,190,.18)';                                 // dust that fell below
+    for (k=0;k<30;k++){ g.fillRect(x + (R()-.5)*r*1.6, y + r*(1.05 + R()*.7), 1.2, 1.2); }
+    for (var c=0;c<3;c++){ var ca = -1.2 + c*1.4 + (R()-.5)*.6; crack(g, R, x + Math.cos(ca)*r*1.05, y + Math.sin(ca)*r, ca, 20 + R()*34, 1); }
+  }
+  function scuff(g, R, x, y, s){
+    // rub marks from shoes and furniture: short, mostly level, dark
+    var a0 = (R()-.5)*.35;
+    for (var k=0;k<5+R()*5;k++){
+      g.strokeStyle = 'rgba(3,8,24,' + (.12+R()*.22) + ')';
+      g.lineWidth = .7 + R()*1.8; g.lineCap = 'round';
+      var a = a0 + (R()-.5)*.25, l = (10 + R()*30)*s, ox = (R()-.5)*22, oy = (R()-.5)*8;
+      g.beginPath(); g.moveTo(x+ox, y+oy); g.lineTo(x+ox+Math.cos(a)*l, y+oy+Math.sin(a)*l); g.stroke();
+    }
+  }
+  function buildLayers(){
+    var R = rng(20261019), phone = W < 700;
+    L = phone ? ROLLER_L_PHONE : ROLLER_L_DESK;
+    var pw = Math.round(W*D), ph = Math.round(H*D);
+    base = mk(pw,ph); fresh = mk(pw,ph); mask = mk(pw,ph); tmp = mk(pw,ph);
+    mctx = mask.getContext('2d'); tctx = tmp.getContext('2d');
+    var av = rectsToAvoid();
+    computeZone(av);
+
+    // old wall: uneven faded paint
+    var g = base.getContext('2d'); g.setTransform(D,0,0,D,0,0);
+    g.fillStyle = OLD; g.fillRect(0,0,W,H);
+    for (var i=0;i<70;i++){
+      var x = R()*W, y = R()*H, r = 40 + R()*220, gr = g.createRadialGradient(x,y,0,x,y,r), lite = R() < .45;
+      gr.addColorStop(0, lite ? 'rgba(70,95,150,.08)' : 'rgba(2,8,26,.13)'); gr.addColorStop(1,'rgba(0,0,0,0)');
+      g.fillStyle = gr; g.fillRect(x-r,y-r,r*2,r*2);
+    }
+    noise(base, 14, R);
+    g.setTransform(D,0,0,D,0,0);
+    var s = phone ? .85 : 1, p, k;
+    if ((p = spot(R, 44, av, true))) knobHole(g, R, p[0], p[1], (phone?17:23));
+    for (k=0;k<(phone?3:6);k++) if ((p = spot(R, 50, av, k<2))) crack(g, R, p[0], p[1], R()*7, 50 + R()*90, 0);
+    for (k=0;k<(phone?4:7);k++){ var sy = H*(.62 + R()*.33), sx = R()*W; if (clear(sx, sy, 30, av)) scuff(g, R, sx, sy, s); }
+    for (k=0;k<(phone?8:16);k++) if ((p = spot(R, 6, av, false))) nailHole(g, p[0], p[1], s);
+
+    // fresh coat: even royal with roller stipple
+    var f = fresh.getContext('2d'); f.setTransform(D,0,0,D,0,0);
+    f.fillStyle = FRESH; f.fillRect(0,0,W,H);
+    for (i=0;i<40;i++){
+      x = R()*W; y = R()*H; r = 60 + R()*200; gr = f.createRadialGradient(x,y,0,x,y,r);
+      gr.addColorStop(0, R()<.5 ? 'rgba(255,255,255,.035)' : 'rgba(0,10,40,.05)'); gr.addColorStop(1,'rgba(0,0,0,0)');
+      f.fillStyle = gr; f.fillRect(x-r,y-r,r*2,r*2);
+    }
+    noise(fresh, 16, R);
+
+    // roller stamp sprites: nap-ragged ends, stippled body
+    stamps = [];
+    for (var v=0; v<3; v++){
+      var sw = Math.round((L+8)*D), sh = Math.round(T*D), sp = mk(sw, sh), sg = sp.getContext('2d'), id = sg.createImageData(sw, sh), dd = id.data;
+      var rowA = [], rowB = [];
+      for (var yr=0; yr<sh; yr++){ rowA.push((R()*9)*D); rowB.push((R()*9)*D); }
+      for (var yy=0; yy<sh; yy++) for (var xx=0; xx<sw; xx++){
+        var edge = Math.min((xx - rowA[yy])/(5*D), (sw - rowB[yy] - xx)/(5*D)), a = Math.max(0, Math.min(1, edge + (R()-.5)*.7));
+        var vy = 1 - Math.abs(yy/sh - .5)*1.4; a *= Math.max(0, vy) * (.55 + R()*.45);
+        var o = (yy*sw + xx)*4; dd[o]=dd[o+1]=dd[o+2]=0; dd[o+3] = a*255;
+      }
+      sg.putImageData(id,0,0); stamps.push(sp);
+    }
+    roller.px = null; roller.ang = 0;
+    drips = [];
+    // replay a few seconds of the roller's own path so the wall already shows the job under way
+    var ap0 = autoPoint(1.5); roller.x = ap0[0]; roller.y = ap0[1];
+    for (var st=1; st<150; st++){ var ap = autoPoint(st/60 + 1.5); steer(ap[0] - roller.x, ap[1] - roller.y); roller.x = ap[0]; roller.y = ap[1]; paintTo(ap[0], ap[1], roller.ang, false); }
+    roller.px = null;
+  }
+  function steer(mvx, mvy){
+    if (Math.hypot(mvx, mvy) <= .6) return;
+    var diff = Math.atan2(mvy, mvx) + Math.PI/2 - roller.ang;
+    diff = ((diff + Math.PI/2) % Math.PI + Math.PI) % Math.PI - Math.PI/2;   // the roller axis has no front or back
+    roller.ang += diff * .16;
+  }
+  function autoPoint(t){
+    var a = t*AUTO_SPEED;
+    return [zone.x + zone.w*(.5 + .42*Math.sin(a*.55 + Math.sin(a*.17)*1.4)), zone.y + zone.h*(.5 + .4*Math.sin(a*2.3))];
+  }
+  function computeZone(av){
+    var hc = av[1], wide = W >= 1024;
+    if (wide && hc){ var zx = hc.x + hc.w + 20; zone = {x:zx, y:H*.18, w:Math.max(120, W - zx - 40), h:H*.7}; }
+    else { var zy = hc ? hc.y + hc.h + 10 : H*.6; zone = {x:24, y:zy, w:W-48, h:Math.max(90, H - zy - 30)}; }
+  }
+
+  function stampAt(x, y, ang){
+    var sp = stamps[(Math.random()*stamps.length)|0];
+    mctx.setTransform(D,0,0,D,0,0); mctx.translate(x,y); mctx.rotate(ang);
+    mctx.globalAlpha = STAMP_ALPHA; mctx.drawImage(sp, -(L+8)/2, -T/2, L+8, T);
+    mctx.globalAlpha = 1; mctx.setTransform(1,0,0,1,0,0);
+  }
+  function paintTo(x, y, ang, drip){
+    if (roller.px === null){ roller.px = x; roller.py = y; stampAt(x,y,ang); return; }
+    var dx = x - roller.px, dy = y - roller.py, dist = Math.hypot(dx,dy), n = Math.ceil(dist/2.2);
+    for (var i=1;i<=n;i++){
+      var sx = roller.px + dx*i/n, sy = roller.py + dy*i/n; stampAt(sx, sy, ang);
+      if (drip && !REDUCED && drips.length < MAX_DRIPS && Math.random() < DRIP_CHANCE){
+        var ux = Math.cos(ang), uy = Math.sin(ang), e = uy >= 0 ? 1 : -1, off = (L/2 - 6) * (Math.random()*.9 + .1);
+        drips.push({x: sx + ux*off*e, y: sy + uy*off*e + 3, len:0, v:.5 + Math.random()*.8, w:2.2 + Math.random()*1.8, max: 18 + Math.random()*50});
+      }
+    }
+    roller.px = x; roller.py = y;
+  }
+  function runDrips(){
+    mctx.setTransform(D,0,0,D,0,0); mctx.fillStyle = mctx.strokeStyle = '#000'; mctx.lineCap = 'round';
+    for (var i=drips.length-1;i>=0;i--){
+      var d = drips[i], nl = Math.min(d.max, d.len + d.v);
+      mctx.lineWidth = d.w; mctx.beginPath(); mctx.moveTo(d.x, d.y + d.len); mctx.lineTo(d.x, d.y + nl); mctx.stroke();
+      d.len = nl; d.v *= .985;
+      if (d.v < .08 || d.len >= d.max){ mctx.beginPath(); mctx.ellipse(d.x, d.y + d.len + d.w*.3, d.w*.85, d.w*1.05, 0, 0, 7); mctx.fill(); drips.splice(i,1); }
+    }
+    mctx.setTransform(1,0,0,1,0,0);
+  }
+
+  function drawRoller(x, y, ang){
+    var ux = Math.cos(ang), uy = Math.sin(ang), nx = -uy, ny = ux;
+    if (ny < 0){ nx = -nx; ny = -ny; }                       // handle hangs below the roller
+    var hl = L/2, dia = W < 700 ? 20 : 26;
+    ctx.save(); ctx.setTransform(D,0,0,D,0,0); ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    // wire frame: from the roller's end, out and down to the grip
+    var ex = x + ux*(hl+5), ey = y + uy*(hl+5);
+    var mx = ex + nx*(dia*.5+10), my = ey + ny*(dia*.5+10);
+    var gx = x + nx*(dia*.5+26), gy = y + ny*(dia*.5+26);
+    ctx.shadowColor = 'rgba(2,8,24,.45)'; ctx.shadowBlur = 10; ctx.shadowOffsetY = 5;
+    ctx.strokeStyle = '#c3cbdb'; ctx.lineWidth = 3.4;
+    ctx.beginPath(); ctx.moveTo(x + ux*(hl-2), y + uy*(hl-2)); ctx.lineTo(ex, ey); ctx.lineTo(mx, my); ctx.lineTo(gx, gy); ctx.stroke();
+    // grip (logo gold)
+    ctx.strokeStyle = '#e0a400'; ctx.lineWidth = 12;
+    ctx.beginPath(); ctx.moveTo(gx + nx*2, gy + ny*2); ctx.lineTo(gx + nx*44, gy + ny*44); ctx.stroke();
+    ctx.shadowColor = 'transparent';
+    ctx.strokeStyle = '#ffc21a'; ctx.lineWidth = 8;
+    ctx.beginPath(); ctx.moveTo(gx + nx*3 - ux*1.2, gy + ny*3 - uy*1.2); ctx.lineTo(gx + nx*43 - ux*1.2, gy + ny*43 - uy*1.2); ctx.stroke();
+    // cover: a paint-soaked nap cylinder
+    ctx.translate(x, y); ctx.rotate(ang);
+    ctx.shadowColor = 'rgba(2,8,24,.5)'; ctx.shadowBlur = 12; ctx.shadowOffsetY = 6;
+    var gr = ctx.createLinearGradient(0, -dia/2, 0, dia/2);
+    gr.addColorStop(0, '#3d68d6'); gr.addColorStop(.45, '#2350c2'); gr.addColorStop(1, '#122f80');
+    ctx.fillStyle = gr; roundRect(-hl, -dia/2, L, dia, dia*.42); ctx.fill();
+    ctx.shadowColor = 'transparent';
+    ctx.fillStyle = 'rgba(255,255,255,.07)';                  // nap texture
+    for (var i=0;i<26;i++){ var px = -hl + 4 + ((i*37)%(L-8)), py = -dia/2 + 3 + ((i*13)%(dia-6)); ctx.fillRect(px, py, 2, 1.5); }
+    ctx.fillStyle = '#0f2a74'; roundRect(-hl - 1, -dia*.32, 4, dia*.64, 2); ctx.fill(); roundRect(hl - 3, -dia*.32, 4, dia*.64, 2); ctx.fill();
+    ctx.restore();
+  }
+  function roundRect(x,y,w,h,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+
+  function render(){
+    ctx.setTransform(1,0,0,1,0,0);
+    ctx.drawImage(base, 0, 0);
+    tctx.globalCompositeOperation = 'copy'; tctx.drawImage(mask, 0, 0);
+    tctx.globalCompositeOperation = 'source-in'; tctx.drawImage(fresh, 0, 0);
+    tctx.globalCompositeOperation = 'source-over';
+    ctx.drawImage(tmp, 0, 0);
+    drawRoller(roller.x, roller.y, roller.ang);
+  }
+
+  function tick(now){
+    if (!visible){ running = false; return; }
+    frame++;
+    var t = (now - t0)/1000, idle = now - lastInput, tx, ty, ease;
+    if (input.on){
+      var r = cv.getBoundingClientRect();          // read every frame: the page may scroll under the finger
+      tx = input.cx - r.left; ty = input.cy - r.top; ease = input.kind === 'touch' ? 1 : .55;
+    } else if (!REDUCED && idle > AUTO_DELAY){
+      var ap = autoPoint(t + 4); tx = ap[0]; ty = ap[1];
+      ease = Math.min(1, (idle - AUTO_DELAY)/1500) * .2;
+    }
+    if (tx !== undefined){
+      var nx = roller.x + (tx - roller.x)*ease, ny = roller.y + (ty - roller.y)*ease, mvx = nx - roller.x, mvy = ny - roller.y;
+      steer(mvx, mvy);
+      roller.x = nx; roller.y = ny;
+      paintTo(nx, ny, roller.ang, true);
+    } else roller.px = null;
+    if (drips.length) runDrips();
+    if (!REDUCED && idle > REGROW_DELAY && frame % REGROW_EVERY === 0){
+      mctx.globalCompositeOperation = 'destination-out'; mctx.fillStyle = 'rgba(0,0,0,' + REGROW_STEP + ')';
+      mctx.fillRect(0, 0, mask.width, mask.height); mctx.globalCompositeOperation = 'source-over';
+    }
+    render();
+    if (REDUCED && !input.on && !drips.length){ running = false; return; }
+    requestAnimationFrame(tick);
+  }
+  function start(){ if (!running && visible){ running = true; requestAnimationFrame(tick); } }
+
+  function size(){
+    var w = Math.round(cv.clientWidth), h = Math.round(cv.clientHeight);
+    if (w === W && h === H) return;             // phones fire resize when the address bar moves; keep the paint
+    W = w; H = h; D = Math.min(window.devicePixelRatio || 1, DPR_CAP);
+    cv.width = Math.round(W*D); cv.height = Math.round(H*D);
+    buildLayers(); render();
+  }
+
+  // input: mouse hovers to roll, finger drags to roll
+  wall.addEventListener('pointermove', function(e){
+    if (e.pointerType !== 'mouse') return;
+    input.on = true; input.kind = 'mouse'; input.cx = e.clientX; input.cy = e.clientY; lastInput = performance.now(); start();
+  });
+  wall.addEventListener('pointerleave', function(e){ if (e.pointerType === 'mouse'){ input.on = false; roller.px = null; } });
+  function touch(e){ var p = e.touches[0]; if (!p) return; input.on = true; input.kind = 'touch'; input.cx = p.clientX; input.cy = p.clientY; lastInput = performance.now(); if (e.type === 'touchstart') roller.px = null; start(); }
+  cv.addEventListener('touchstart', touch, {passive:true});
+  cv.addEventListener('touchmove', touch, {passive:true});
+  cv.addEventListener('touchend', function(){ input.on = false; roller.px = null; lastInput = performance.now(); }, {passive:true});
+  cv.addEventListener('touchcancel', function(){ input.on = false; roller.px = null; }, {passive:true});
+  // touch-only browsers without touch events (rare): pointer fallback
+  cv.addEventListener('pointerdown', function(e){ if (e.pointerType === 'mouse') return; e.preventDefault(); });
+
+  new IntersectionObserver(function(es){ visible = es[0].isIntersecting; if (visible) start(); }).observe(wall);
+  window.addEventListener('resize', function(){ size(); });
+  size();
+  lastInput = performance.now() - AUTO_DELAY + 400;   // start working almost at once
+  start();
+})();
+
+/* ---------- roller-laid section edges ---------- */
+(function(){
+  var edges = [].slice.call(document.querySelectorAll('.edge')), lastW = 0;
+  function rollerSVG(color){
+    return '<svg class="roll" viewBox="0 0 40 62" aria-hidden="true"><path d="M30 8v-4h6v28H22v14" fill="none" stroke="#c3cbdb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><rect x="18.5" y="44" width="7" height="17" rx="3.5" fill="#ffc21a"/><rect x="6" y="2" width="20" height="40" rx="9" fill="' + color + '" stroke="rgba(0,0,0,.18)" stroke-width="1"/></svg>';
+  }
+  function build(){
+    var w = Math.round(document.documentElement.clientWidth);
+    if (w === lastW) return; lastW = w;
+    edges.forEach(function(el, idx){
+      var seed = idx*977 + 13, R = function(){ seed = (seed*16807) % 2147483647; return seed/2147483647; };
+      var c = el.dataset.color, h = 30, d = 'M0 ' + h + ' L0 16', y = 16, x;
+      for (x = 0; x <= w; x += 3){
+        y += (R() - .5)*2.2; y = Math.max(9, Math.min(21, y + (16 - y)*.08));
+        var spike = R() < .12 ? (R() - .5)*5 : 0;
+        d += ' L' + x + ' ' + (y + spike).toFixed(1);
+      }
+      d += ' L' + w + ' ' + h + ' Z';
+      var dots = '';
+      for (var i = 0; i < w/9; i++){ var dx = R()*w, dy = 2 + R()*9, rr = .5 + R()*1.4; dots += '<circle cx="' + dx.toFixed(1) + '" cy="' + dy.toFixed(1) + '" r="' + rr.toFixed(1) + '"/>'; }
+      el.innerHTML = '<svg class="paint" viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" fill="' + c + '"><path d="' + d + '"/>' + dots + '</svg>' + rollerSVG(c);
+      el.style.setProperty('--run', (w + 20) + 'px');
+    });
+  }
+  build();
+  window.addEventListener('resize', build);
+  if (!('IntersectionObserver' in window)) { edges.forEach(function(e){ e.classList.add('on'); }); return; }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+  }, {rootMargin: '0px 0px -12% 0px'});
+  edges.forEach(function(e){ io.observe(e); });
+})();
+
+/* ---------- ask for a price: turns into a text ---------- */
+(function(){
+  var chips = document.getElementById('chips');
+  var tick = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  chips.innerHTML = SERVICES.map(function(s, i){
+    return '<label class="chip"><input type="checkbox" name="job" value="' + s.replace(/&/g,'&amp;') + '" id="j' + i + '"><span>' + tick + s.replace(/&/g,'&amp;') + '</span></label>';
+  }).join('');
+  var form = document.getElementById('quoteForm'), sent = document.getElementById('sent'), msgEl = document.getElementById('msg');
+  var fJobs = document.getElementById('f-jobs'), wTown = document.getElementById('w-town');
+  var town = document.getElementById('f-town'), detail = document.getElementById('f-detail'), name = document.getElementById('f-name');
+  function picked(){ return [].slice.call(form.querySelectorAll('input[name=job]:checked')).map(function(i){ return i.value; }); }
+  form.addEventListener('change', function(){ if (picked().length || detail.value.trim()) fJobs.classList.remove('bad'); });
+  town.addEventListener('input', function(){ if (town.value.trim()) wTown.classList.remove('bad'); });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var jobs = picked(), d = detail.value.trim(), tn = town.value.trim(), nm = name.value.trim(), ok = true;
+    if (!jobs.length && !d){ fJobs.classList.add('bad'); ok = false; }
+    if (!tn){ wTown.classList.add('bad'); ok = false; }
+    if (!ok){ (jobs.length || d ? town : form.querySelector('input[name=job]')).focus(); return; }
+    var lines = ['Hi Diogo!' + (nm ? ' This is ' + nm + '.' : '') + " I'd like a price on:"];
+    if (jobs.length) lines.push(jobs.join(', '));
+    if (d) lines.push(d);
+    lines.push('Town: ' + tn);
+    lines.push("Here are some photos:");
+    var body = lines.join('\n'), href = smsHref(body);
+    msgEl.textContent = body;
+    document.getElementById('sendAgain').href = href;
+    sent.classList.add('show');
+    sent.scrollIntoView({behavior: REDUCED ? 'auto' : 'smooth', block: 'nearest'});
+    window.location.href = href;
+  });
+  document.getElementById('copy').addEventListener('click', function(){
+    var b = this, text = msgEl.textContent;
+    function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy the text'; }, 1800); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, select); else select();
+    function select(){ var r = document.createRange(); r.selectNodeContents(msgEl); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected: copy it'; }
+  });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
