@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T22:00:30.440675+00:00",
+  "title": "Design System: Diogo's Handy Services",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "neutral",
+        "displayName": "Logo Navy",
+        "canonical": "#0d2152",
+        "tonalRamp": [
+          "oklch(15% 0.051 264)",
+          "oklch(26% 0.068 264)",
+          "oklch(38% 0.087 264)",
+          "oklch(50% 0.093 264)",
+          "oklch(62% 0.093 264)",
+          "oklch(74% 0.084 264)",
+          "oklch(85% 0.067 264)",
+          "oklch(95% 0.051 264)"
+        ]
+      },
+      "navy-deep": {
+        "role": "neutral",
+        "displayName": "Deep Navy",
+        "canonical": "#0a1a44",
+        "tonalRamp": [
+          "oklch(15% 0.047 265)",
+          "oklch(26% 0.063 265)",
+          "oklch(38% 0.079 265)",
+          "oklch(50% 0.082 265)",
+          "oklch(62% 0.082 265)",
+          "oklch(74% 0.076 265)",
+          "oklch(85% 0.061 265)",
+          "oklch(95% 0.047 265)"
+        ]
+      },
+      "wall-old": {
+        "role": "neutral",
+        "displayName": "Old Wall Navy",
+        "canonical": "#15295a",
+        "tonalRamp": [
+          "oklch(15% 0.051 265)",
+          "oklch(26% 0.068 265)",
+          "oklch(38% 0.086 265)",
+          "oklch(50% 0.092 265)",
+          "oklch(62% 0.092 265)",
+          "oklch(74% 0.083 265)",
+          "oklch(85% 0.066 265)",
+          "oklch(95% 0.051 265)"
+        ]
+      },
+      "royal": {
+        "role": "secondary",
+        "displayName": "Fresh Coat Royal",
+        "canonical": "#1d46b3",
+        "tonalRamp": [
+          "oklch(15% 0.080 264)",
+          "oklch(26% 0.113 264)",
+          "oklch(38% 0.148 264)",
+          "oklch(50% 0.179 264)",
+          "oklch(62% 0.178 264)",
+          "oklch(74% 0.142 264)",
+          "oklch(85% 0.110 264)",
+          "oklch(95% 0.080 264)"
+        ]
+      },
+      "bright": {
+        "role": "secondary",
+        "displayName": "Logo Bright Blue",
+        "canonical": "#2a7bff",
+        "tonalRamp": [
+          "oklch(15% 0.091 260)",
+          "oklch(26% 0.129 260)",
+          "oklch(38% 0.172 260)",
+          "oklch(50% 0.212 260)",
+          "oklch(62% 0.207 260)",
+          "oklch(74% 0.165 260)",
+          "oklch(85% 0.126 260)",
+          "oklch(95% 0.091 260)"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Logo Window Gold",
+        "canonical": "#ffc21a",
+        "tonalRamp": [
+          "oklch(15% 0.076 85)",
+          "oklch(26% 0.107 85)",
+          "oklch(38% 0.141 85)",
+          "oklch(50% 0.169 85)",
+          "oklch(62% 0.169 85)",
+          "oklch(74% 0.136 85)",
+          "oklch(85% 0.105 85)",
+          "oklch(95% 0.076 85)"
+        ]
+      },
+      "gold-deep": {
+        "role": "primary",
+        "displayName": "Grip Shadow Gold",
+        "canonical": "#e0a400",
+        "tonalRamp": [
+          "oklch(15% 0.072 82)",
+          "oklch(26% 0.100 82)",
+          "oklch(38% 0.132 82)",
+          "oklch(50% 0.156 82)",
+          "oklch(62% 0.156 82)",
+          "oklch(74% 0.126 82)",
+          "oklch(85% 0.098 82)",
+          "oklch(95% 0.072 82)"
+        ]
+      },
+      "gold-lift": {
+        "role": "primary",
+        "displayName": "Lit Gold",
+        "canonical": "#ffd04d",
+        "tonalRamp": [
+          "oklch(15% 0.071 89)",
+          "oklch(26% 0.099 89)",
+          "oklch(38% 0.129 89)",
+          "oklch(50% 0.153 89)",
+          "oklch(62% 0.153 89)",
+          "oklch(74% 0.124 89)",
+          "oklch(85% 0.096 89)",
+          "oklch(95% 0.071 89)"
+        ]
+      },
+      "primer": {
+        "role": "neutral",
+        "displayName": "Primer White",
+        "canonical": "#eef2fb",
+        "tonalRamp": [
+          "oklch(15% 0.013 267)",
+          "oklch(26% 0.013 267)",
+          "oklch(38% 0.013 267)",
+          "oklch(50% 0.013 267)",
+          "oklch(62% 0.013 267)",
+          "oklch(74% 0.013 267)",
+          "oklch(85% 0.013 267)",
+          "oklch(95% 0.013 267)"
+        ]
+      },
+      "primer-ink": {
+        "role": "neutral",
+        "displayName": "Primer Ink",
+        "canonical": "#0d2152",
+        "tonalRamp": [
+          "oklch(15% 0.051 264)",
+          "oklch(26% 0.068 264)",
+          "oklch(38% 0.087 264)",
+          "oklch(50% 0.093 264)",
+          "oklch(62% 0.093 264)",
+          "oklch(74% 0.084 264)",
+          "oklch(85% 0.067 264)",
+          "oklch(95% 0.051 264)"
+        ]
+      },
+      "primer-soft": {
+        "role": "neutral",
+        "displayName": "Primer Soft",
+        "canonical": "#3a4c7a",
+        "tonalRamp": [
+          "oklch(15% 0.047 267)",
+          "oklch(26% 0.061 267)",
+          "oklch(38% 0.077 267)",
+          "oklch(50% 0.080 267)",
+          "oklch(62% 0.080 267)",
+          "oklch(74% 0.075 267)",
+          "oklch(85% 0.060 267)",
+          "oklch(95% 0.047 267)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Cool White",
+        "canonical": "#f5f8ff",
+        "tonalRamp": [
+          "oklch(15% 0.010 267)",
+          "oklch(26% 0.010 267)",
+          "oklch(38% 0.010 267)",
+          "oklch(50% 0.010 267)",
+          "oklch(62% 0.010 267)",
+          "oklch(74% 0.010 267)",
+          "oklch(85% 0.010 267)",
+          "oklch(95% 0.010 267)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(50% 0.000 90)",
+          "oklch(62% 0.000 90)",
+          "oklch(74% 0.000 90)",
+          "oklch(85% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#c9d5f2",
+        "tonalRamp": [
+          "oklch(15% 0.034 268)",
+          "oklch(26% 0.042 268)",
+          "oklch(38% 0.042 268)",
+          "oklch(50% 0.042 268)",
+          "oklch(62% 0.042 268)",
+          "oklch(74% 0.042 268)",
+          "oklch(85% 0.041 268)",
+          "oklch(95% 0.034 268)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Control Line",
+        "canonical": "#7d8db5",
+        "tonalRamp": [
+          "oklch(15% 0.041 268)",
+          "oklch(26% 0.053 268)",
+          "oklch(38% 0.063 268)",
+          "oklch(50% 0.063 268)",
+          "oklch(62% 0.063 268)",
+          "oklch(74% 0.063 268)",
+          "oklch(85% 0.051 268)",
+          "oklch(95% 0.041 268)"
+        ]
+      },
+      "roller-wire": {
+        "role": "neutral",
+        "displayName": "Roller Wire",
+        "canonical": "#c3cbdb",
+        "tonalRamp": [
+          "oklch(15% 0.024 264)",
+          "oklch(26% 0.024 264)",
+          "oklch(38% 0.024 264)",
+          "oklch(50% 0.024 264)",
+          "oklch(62% 0.024 264)",
+          "oklch(74% 0.024 264)",
+          "oklch(85% 0.024 264)",
+          "oklch(95% 0.024 264)"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error Red",
+        "canonical": "#b3261e",
+        "tonalRamp": [
+          "oklch(15% 0.079 29)",
+          "oklch(26% 0.112 29)",
+          "oklch(38% 0.148 29)",
+          "oklch(50% 0.178 29)",
+          "oklch(62% 0.178 29)",
+          "oklch(74% 0.142 29)",
+          "oklch(85% 0.109 29)",
+          "oklch(95% 0.079 29)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; second line in gold."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Uppercase section heads."
+      },
+      "numeral": {
+        "displayName": "Step Numeral",
+        "purpose": "Big royal step numbers in How it works."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Uppercase step titles."
+      },
+      "row": {
+        "displayName": "Row",
+        "purpose": "Service rows and the Facebook card line."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy; ledes capped at 34em."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, legends, field labels, header phone number."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-drop",
+        "value": "0 6px 16px -6px rgba(2,8,24,.5)",
+        "purpose": "Gold buttons on dark bands."
+      },
+      {
+        "name": "card-lift",
+        "value": "0 14px 32px -16px rgba(0,0,0,.55)",
+        "purpose": "Facebook card on navy."
+      },
+      {
+        "name": "wall-glow",
+        "value": "0 2px 22px #0d2152, 0 1px 4px rgba(13,33,82,.6)",
+        "purpose": "text-shadow on hero copy over the canvas only, for legibility."
+      },
+      {
+        "name": "tel-glow",
+        "value": "0 2px 12px #0d2152",
+        "purpose": "text-shadow on the header phone number over the canvas."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-paint",
+        "value": "cubic-bezier(.22,.8,.3,1)",
+        "purpose": "Roller edges, edge roller, chip paint fill."
+      },
+      {
+        "name": "edge-lay",
+        "value": "1.25s",
+        "purpose": "Duration of a roller edge pass (clip-path reveal + roller ride), once at 12% into viewport."
+      },
+      {
+        "name": "chip-fill",
+        "value": "background-size .28s",
+        "purpose": "Royal paint rolling across a checked chip."
+      },
+      {
+        "name": "control-state",
+        "value": ".18s background-color, color, border-color",
+        "purpose": "Buttons and service arrows."
+      },
+      {
+        "name": "field-state",
+        "value": ".15s border-color",
+        "purpose": "Fields and chip borders."
+      },
+      {
+        "name": "press",
+        "value": "translateY(1px) .12s",
+        "purpose": "Button active state."
+      },
+      {
+        "name": "card-lift-hover",
+        "value": "translateY(-2px) .15s",
+        "purpose": "Facebook card hover."
+      },
+      {
+        "name": "wall-autoplay",
+        "value": "start ~0.4s after load, resume 2.6s after input stops; 300px/s phone, 430px/s desktop; spring 38, damp 6.5; rest 4s between patches",
+        "purpose": "Scripted roller painter on the hero canvas."
+      },
+      {
+        "name": "wall-fade-back",
+        "value": "after 5s idle while resting: 1.5% global erase + 5 blobs at 0.1 every 15 frames",
+        "purpose": "Old coat shows through again unevenly so there is always something to fix."
+      },
+      {
+        "name": "wall-patch",
+        "value": "crossfade at 1.2/s once cover > 30%",
+        "purpose": "Doorknob hole becomes dried spackle under the coat."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all transitions/animations off; edges pre-painted, no edge roller; wall paints only under the visitor's hand",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "base",
+        "value": "0"
+      },
+      {
+        "name": "md",
+        "value": "700px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "short-landscape",
+        "value": "(orientation:landscape) and (max-height:500px)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "The one action color: text Diogo a photo.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-btn ds-btn-gold\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 8.5A2.5 2.5 0 0 1 6.5 6h1.8l1.4-2h4.6l1.4 2h1.8A2.5 2.5 0 0 1 20 8.5v8a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 16.5z\"/><circle cx=\"12\" cy=\"12.5\" r=\"3.4\"/></svg>Text me a photo</a></div>",
+      "css": ":host{--navy:#0d2152;--navy-deep:#0a1a44;--royal:#1d46b3;--bright:#2a7bff;--gold:#ffc21a;--primer:#eef2fb;--primer-ink:#0d2152;--primer-soft:#3a4c7a;--white:#f5f8ff;--mist:#c9d5f2;--line:#7d8db5;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:56px;padding:0 22px;border-radius:12px;border:2px solid transparent;font:800 1.0625rem/1 var(--font);text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s,transform .12s} .ds-btn:active{transform:translateY(1px)} .ds-btn svg{width:22px;height:22px} .ds-btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px} .ds-dark{background:var(--navy);padding:24px} .ds-btn-gold{background:var(--gold);color:var(--navy);border-color:var(--gold);box-shadow:0 6px 16px -6px rgba(2,8,24,.5)} .ds-btn-gold:hover{background:#ffd04d;border-color:#ffd04d}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action on dark bands.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-btn ds-btn-line\" href=\"#\">Get a quote</a></div>",
+      "css": ":host{--navy:#0d2152;--navy-deep:#0a1a44;--royal:#1d46b3;--bright:#2a7bff;--gold:#ffc21a;--primer:#eef2fb;--primer-ink:#0d2152;--primer-soft:#3a4c7a;--white:#f5f8ff;--mist:#c9d5f2;--line:#7d8db5;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:56px;padding:0 22px;border-radius:12px;border:2px solid transparent;font:800 1.0625rem/1 var(--font);text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s,transform .12s} .ds-btn:active{transform:translateY(1px)} .ds-btn svg{width:22px;height:22px} .ds-btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px} .ds-dark{background:var(--navy);padding:24px} .ds-btn-line{background:transparent;color:var(--white);border-color:rgba(245,248,255,.85)} .ds-btn-line:hover{background:rgba(245,248,255,.1);border-color:var(--white)}"
+    },
+    {
+      "name": "Plain Button",
+      "kind": "button",
+      "refersTo": "button-plain",
+      "description": "Secondary action on primer surfaces; bright outline on hover/focus.",
+      "html": "<div class=\"ds-light\"><button class=\"ds-btn ds-btn-plain\" type=\"button\">Copy the text</button></div>",
+      "css": ":host{--navy:#0d2152;--navy-deep:#0a1a44;--royal:#1d46b3;--bright:#2a7bff;--gold:#ffc21a;--primer:#eef2fb;--primer-ink:#0d2152;--primer-soft:#3a4c7a;--white:#f5f8ff;--mist:#c9d5f2;--line:#7d8db5;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:56px;padding:0 22px;border-radius:12px;border:2px solid transparent;font:800 1.0625rem/1 var(--font);text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s,transform .12s} .ds-btn:active{transform:translateY(1px)} .ds-btn svg{width:22px;height:22px} .ds-btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px} .ds-light{background:var(--primer);padding:24px} .ds-btn-plain{min-height:48px;font-size:1rem;background:#fff;color:var(--primer-ink);border-color:var(--line)} .ds-btn-plain:hover,.ds-btn-plain:focus-visible{outline:3px solid var(--bright);outline-offset:1px;border-color:var(--bright)}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "A job that texts Diogo; on hover only the arrow turns gold.",
+      "html": "<ul class=\"ds-jobs\"><li><a href=\"#\"><span>Drywall Repair &amp; Patching</span><span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h13M12 6l6 6-6 6\"/></svg></span></a></li><li><a href=\"#\"><span>Painting &amp; Touch-Ups</span><span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h13M12 6l6 6-6 6\"/></svg></span></a></li></ul>",
+      "css": ":host{--navy:#0d2152;--navy-deep:#0a1a44;--royal:#1d46b3;--bright:#2a7bff;--gold:#ffc21a;--primer:#eef2fb;--primer-ink:#0d2152;--primer-soft:#3a4c7a;--white:#f5f8ff;--mist:#c9d5f2;--line:#7d8db5;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-jobs{list-style:none;margin:0;padding:24px;background:var(--royal);color:var(--white);font-family:var(--font)} .ds-jobs a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:10px 0;border-bottom:1px solid rgba(245,248,255,.18);color:inherit;text-decoration:none;font-weight:800;font-size:1.1875rem;line-height:1.3} .ds-jobs li:first-child a{border-top:1px solid rgba(245,248,255,.18)} .ds-arrow{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:rgba(245,248,255,.14);transition:background-color .18s,color .18s} .ds-arrow svg{width:20px;height:20px} .ds-jobs a:hover,.ds-jobs a:focus-visible{outline:none} .ds-jobs a:hover .ds-arrow,.ds-jobs a:focus-visible .ds-arrow{background:var(--gold);color:var(--navy)} .ds-jobs a:focus-visible .ds-arrow{outline:3px solid var(--gold);outline-offset:3px}"
+    },
+    {
+      "name": "Job Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Checkbox chip; royal paint rolls across when checked.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"checkbox\" checked><span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"/></svg>Hanging &amp; Mounting</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12.5l4.5 4.5L19 7.5\"/></svg>Furniture Assembly</span></label></div>",
+      "css": ":host{--navy:#0d2152;--navy-deep:#0a1a44;--royal:#1d46b3;--bright:#2a7bff;--gold:#ffc21a;--primer:#eef2fb;--primer-ink:#0d2152;--primer-soft:#3a4c7a;--white:#f5f8ff;--mist:#c9d5f2;--line:#7d8db5;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-chips{display:flex;flex-wrap:wrap;gap:8px;background:var(--primer);padding:24px;font-family:var(--font);color:var(--primer-ink)} .ds-chip{position:relative} .ds-chip input{position:absolute;opacity:0;width:1px;height:1px} .ds-chip span{background:#fff linear-gradient(var(--royal),var(--royal)) no-repeat 0 0/0% 100%;transition:background-size .28s cubic-bezier(.22,.8,.3,1),border-color .15s,color .15s;display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 14px;border-radius:10px;border:2px solid var(--line);font-weight:700;font-size:.9688rem;line-height:1.3;cursor:pointer} .ds-chip span svg{width:16px;height:16px;display:none} .ds-chip input:checked + span{background-size:100% 100%;border-color:var(--royal);color:#fff} .ds-chip input:checked + span svg{display:block} .ds-chip:hover span{border-color:var(--bright);outline:2px solid var(--bright);outline-offset:1px} .ds-chip input:focus-visible + span{outline:3px solid var(--bright);outline-offset:2px;border-color:var(--bright)}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Paper field on primer; bright border and outline on hover/focus.",
+      "html": "<div class=\"ds-light\"><label class=\"ds-lab\" for=\"ds-town\">Your town</label><input class=\"ds-input\" id=\"ds-town\" type=\"text\" placeholder=\"e.g. Clark\"></div>",
+      "css": ":host{--navy:#0d2152;--navy-deep:#0a1a44;--royal:#1d46b3;--bright:#2a7bff;--gold:#ffc21a;--primer:#eef2fb;--primer-ink:#0d2152;--primer-soft:#3a4c7a;--white:#f5f8ff;--mist:#c9d5f2;--line:#7d8db5;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-light{background:var(--primer);padding:24px;font-family:var(--font);color:var(--primer-ink)} .ds-lab{display:block;font-weight:800;font-size:1.0625rem;margin-bottom:10px} .ds-input{width:100%;font:500 1.0625rem/1.4 var(--font);color:var(--primer-ink);background:#fff;border:2px solid var(--line);border-radius:10px;padding:13px 14px;min-height:52px;caret-color:var(--royal);transition:border-color .15s} .ds-input::placeholder{color:#5d6b8f} .ds-input:hover{border-color:var(--bright);outline:2px solid var(--bright);outline-offset:1px} .ds-input:focus{outline:3px solid var(--bright);outline-offset:1px;border-color:var(--bright)}"
+    },
+    {
+      "name": "Facebook Card",
+      "kind": "card",
+      "refersTo": "facebook-card",
+      "description": "The single route to his work, under 'See my work'.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-fb\" href=\"#\"><span class=\"ds-ficon\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.87.25-1.46 1.5-1.46h1.6V4.35A21 21 0 0 0 14.3 4.2c-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21z\"/></svg></span><span class=\"ds-txt\">Click to see more of my work.<small>Before-and-after photos on my Facebook</small></span><span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h13M12 6l6 6-6 6\"/></svg></span></a></div>",
+      "css": ":host{--navy:#0d2152;--navy-deep:#0a1a44;--royal:#1d46b3;--bright:#2a7bff;--gold:#ffc21a;--primer:#eef2fb;--primer-ink:#0d2152;--primer-soft:#3a4c7a;--white:#f5f8ff;--mist:#c9d5f2;--line:#7d8db5;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-dark{background:var(--navy);padding:24px;font-family:var(--font)} .ds-fb{display:flex;align-items:center;gap:16px;min-height:96px;padding:18px 20px 18px 18px;border-radius:18px;background:var(--white);color:var(--navy);text-decoration:none;font-weight:900;font-size:1.375rem;line-height:1.3;box-shadow:0 14px 32px -16px rgba(0,0,0,.55);transition:transform .15s} .ds-fb:hover{transform:translateY(-2px)} .ds-ficon{flex:none;width:56px;height:56px;border-radius:12px;background:#1877f2;display:grid;place-items:center;color:#fff} .ds-ficon svg{width:26px;height:26px} .ds-txt{flex:1} .ds-txt small{display:block;font-weight:600;font-size:.9375rem;color:var(--primer-soft);margin-top:4px} .ds-arrow{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--primer);transition:background-color .18s} .ds-arrow svg{width:20px;height:20px} .ds-fb:hover .ds-arrow{background:var(--gold)} .ds-fb:focus-visible{outline:3px solid var(--gold);outline-offset:3px}"
+    },
+    {
+      "name": "Header Bar",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Logo left, phone number right; scrolls with the wall, never sticky.",
+      "html": "<header class=\"ds-bar\"><span class=\"ds-logo\">DIOGO'S</span><a class=\"ds-tel\" href=\"#\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z\"/></svg>908-764-8253</a></header>",
+      "css": ":host{--navy:#0d2152;--navy-deep:#0a1a44;--royal:#1d46b3;--bright:#2a7bff;--gold:#ffc21a;--primer:#eef2fb;--primer-ink:#0d2152;--primer-soft:#3a4c7a;--white:#f5f8ff;--mist:#c9d5f2;--line:#7d8db5;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif} .ds-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:#15295a;color:var(--white);font-family:var(--font)} .ds-logo{font-weight:900;font-size:1.5rem;letter-spacing:-.02em} .ds-tel{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 4px;font-weight:800;font-size:1.0625rem;color:inherit;text-decoration:none;white-space:nowrap;text-shadow:0 2px 12px var(--navy)} .ds-tel svg{width:20px;height:20px;color:var(--gold)} .ds-tel:hover{text-decoration:underline} .ds-tel:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}"
+    },
+    {
+      "name": "Roller Edge",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Ragged roller-laid divider in the incoming band's color, with spatter.",
+      "html": "<div class=\"ds-edge\"><div class=\"ds-top\"></div><svg viewBox=\"0 0 300 30\" preserveAspectRatio=\"none\" fill=\"#1d46b3\"><path d=\"M0 34 L0 16 L12 15 L24 17 L36 14 L48 16 L60 18 L72 15 L84 13 L96 16 L108 17 L120 15 L132 18 L144 16 L156 14 L168 15 L180 17 L192 16 L204 13 L216 15 L228 17 L240 16 L252 14 L264 15 L276 18 L288 16 L300 15 L300 34 Z\"/><circle cx=\"20\" cy=\"6\" r=\"1\"/><circle cx=\"70\" cy=\"9\" r=\"1.4\"/><circle cx=\"130\" cy=\"4\" r=\".8\"/><circle cx=\"190\" cy=\"8\" r=\"1.2\"/><circle cx=\"250\" cy=\"5\" r=\"1\"/></svg><div class=\"ds-bot\"></div></div>",
+      "css": ".ds-edge{background:#15295a} .ds-top{height:40px} .ds-edge svg{display:block;width:100%;height:30px;margin-top:-29px;position:relative} .ds-bot{height:40px;background:#1d46b3;margin-top:-4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Wall He's Fixing",
+    "overview": "**Creative North Star: \"The Wall He's Fixing\"**\n\nThe whole page is one wall in Diogo's logo colors, and you watch it get fixed. The hero is a scuffed old navy coat (hairline cracks, nail holes, low rub marks, one doorknob hole torn through the drywall), and a paint roller with a gold grip lays fresh royal blue over it. The fresh coat then turns into the page itself: each section is a solid band of paint, and the bands meet at ragged roller edges that a small roller lays left to right as you scroll to them. The colors come from his logo and flyer and nowhere else: navy ground, royal coat, primer white, logo gold.\n\nType is heavy, uppercase and tight, like the block caps in his logo. Everything is set in the system sans stack at weights 800 to 900. The page is built for a phone first: one column, thumb-sized targets (44px or more, 56px for primary actions), and the main action is always a text message with a photo attached. Elevation stays low. The real objects (the roller, the gold button, the Facebook card) cast soft shadows, and the bands are flat paint.\n\nMotion means work being done. The roller paints, drips run down, the hole gets spackled over, and the old coat slowly shows through again so there is always something left to fix. Nothing moves just to look nice.",
+    "keyCharacteristics": [
+      "Full-bleed bands of solid color, in the order navy wall, royal, primer, navy, primer, navy-deep.",
+      "Ragged roller-edge dividers with spatter dots, never straight lines or waves.",
+      "Heavy uppercase system sans headings (900, line-height 0.98, negative tracking).",
+      "Gold is the one action color. Bright blue marks interaction on primer surfaces.",
+      "A canvas hero that is a real paint job: autoplay W strokes, visitor takeover, drips, a patch, fade-back."
+    ],
+    "rules": [
+      {
+        "name": "The Logo Palette Rule",
+        "body": "Every brand color comes from the logo or flyer: navy, royal, bright blue, gold, white. Add a new hue only when it is a material in the wall's world (gypsum, spackle, steel).",
+        "section": "colors"
+      },
+      {
+        "name": "The Gold Hand Rule",
+        "body": "Gold goes on the action and on the tool doing the work. It is never a band background or a decorative fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paint Becomes Page Rule",
+        "body": "A band's color is the coat the roller just laid. Section backgrounds are flat, full-bleed tokens from the palette, and each one is introduced by an edge in its own color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight Not Face Rule",
+        "body": "Hierarchy comes from weight (900, 800, 700, 400), case and size. Every role uses the same system stack.",
+        "section": "typography"
+      },
+      {
+        "name": "The Uppercase Is For Heads Rule",
+        "body": "Uppercase applies to h1, h2 and h3 only. Body, labels, buttons and rows stay in sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Only Objects Cast Rule",
+        "body": "Something casts a shadow only if it would cast one in the real room. Bands, rows, chips and fields stay flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep the system font stack for every role. This is a house rule: no webfonts.",
+      "**Do** put the phone number only at the top right of the header (and repeat it in the footer). It scrolls away with the page.",
+      "**Do** keep the Facebook link under \"See my work\" as the single route to his work, with the footer link as the only repeat.",
+      "**Do** change only the arrow (gold fill, navy glyph) when a service row is hovered or focused.",
+      "**Do** outline form controls (fields, chips, plain and in-form buttons) in bright on hover and focus: a 2px outline on hover and 3px on focus, plus a bright border.",
+      "**Do** join every pair of bands with a roller edge in the incoming band's color, laid left to right as it scrolls into view.",
+      "**Do** make gold mean action: the primary text button, the arrow you are about to tap, the grip of the tool.",
+      "**Do** keep tap targets at 44px or more, and 56px for primary buttons.",
+      "**Do** honor reduced motion: no transitions or animations, edges shown already painted with no roller, and a still wall that only paints under the visitor's own hand."
+    ],
+    "donts": [
+      "**Don't** add a sticky or fixed contact bar, or a floating call button.",
+      "**Don't** add an email address or a mailto link anywhere.",
+      "**Don't** give service rows a hover background, row outline, underline or shadow.",
+      "**Don't** use straight rules, waves or diagonal cuts between bands.",
+      "**Don't** use gold as a band background or a large decorative fill.",
+      "**Don't** put hard offset shadows or shadows on flat elements (bands, rows, chips, fields).",
+      "**Don't** add motion that is not a paint or repair action happening on the wall.",
+      "**Don't** set body, labels or buttons in uppercase."
+    ]
+  }
+}
