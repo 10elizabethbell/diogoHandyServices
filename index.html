@@ -358,14 +358,14 @@ var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 /* ---------- the wall: scuffed old coat, a roller patches and lays a fresh one ---------- */
 (function(){
   // tunables
-  var OLD = '#15295a', FRESH = '#1d46b3', PATCH = '#8796ba';
+  var OLD = '#15295a', FRESH = '#1d46b3', PATCH = '#2c4580';
   var ROLLER_L_PHONE = 74, ROLLER_L_DESK = 104;   // roller cover length (css px)
   var STAMP_ALPHA = 0.5;      // paint laid per pass by a loaded roller (coats build up)
   var LOAD_PX = 900;          // px of rolling before the roller runs dry-ish
   var AUTO_DELAY = 2600;      // ms after the visitor stops before the roller works by itself
   var SPEED_DESK = 430, SPEED_PHONE = 300;          // autoplay stroke speed, px/s
   var SPRING = 38, DAMP = 6.5;                      // how the roller follows its stroke plan
-  var JOB_REST = 6;           // s the roller rests between patches while the old wall shows through again
+  var JOB_REST = 4;           // s the roller rests between patches while the old wall shows through again
   var REGROW_DELAY = 5000;    // ms the visitor must be idle before any fade-back
   var REGROW_EVERY = 15, REGROW_ALL = 0.015, REGROW_BLOBS = 5, REGROW_BLOB_A = 0.1;
   var PATCH_AT = 0.3;         // paint cover over the hole that counts as "patched"
@@ -525,25 +525,29 @@ var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     newPatch(true);
     roller.x = job.plan[0][0]; roller.y = job.plan[0][1];
     // replay the start of the job so the wall already shows it under way
-    for (var st=0; st<70; st++) autoStep(1/60, false);
+    for (var st=0; st<900 && job.phase === 'paint' && job.seg < 6; st++) autoStep(1/60, false);
     roller.px = null;
   }
   function spackle(g, R, x, y, r){
-    // a skim of joint compound over the hole, feathered out and sanded
-    var n = 22, pts = [];
-    for (var i=0;i<n;i++){ var a = i/n*Math.PI*2, rr = r*(1.45 + R()*.3); pts.push([x+Math.cos(a)*rr, y+Math.sin(a)*rr*.9]); }
-    g.save(); g.filter = 'blur(1px)';
+    // dried joint compound knifed over the hole: matte, a shade lighter than the wall, hard edge, drag marks
+    var n = 9, pts = [], a0 = (R()-.5)*.4;
+    for (var i=0;i<n;i++){ var a = a0 + i/n*Math.PI*2, rr = r*(1.35 + R()*.25); pts.push([x+Math.cos(a)*rr*1.15, y+Math.sin(a)*rr*.85]); }
     g.beginPath(); pts.forEach(function(q,i){ g[i?'lineTo':'moveTo'](q[0],q[1]); }); g.closePath();
-    var gr = g.createRadialGradient(x, y, r*.4, x, y, r*1.7);
-    gr.addColorStop(0, PATCH); gr.addColorStop(.6, 'rgba(160,172,198,.75)'); gr.addColorStop(1, 'rgba(140,155,185,0)');
-    g.fillStyle = gr; g.fill(); g.restore();
-    g.strokeStyle = 'rgba(150,160,185,.22)'; g.lineWidth = 1;
-    for (var k=0;k<3;k++){ g.beginPath(); g.arc(x + (R()-.5)*r*.5, y + (R()-.5)*r*.4, r*(.5 + R()*.5), R()*6, R()*6 + 2.2); g.stroke(); }
+    g.fillStyle = PATCH; g.fill();
+    g.save(); g.clip();
+    for (var k=0;k<7;k++){                                   // putty-knife drag lines, all one direction
+      var yy = y - r*1.2 + k*r*.38 + (R()-.5)*3;
+      g.strokeStyle = R() < .5 ? 'rgba(255,255,255,.07)' : 'rgba(10,20,50,.12)'; g.lineWidth = 1 + R()*1.5;
+      g.beginPath(); g.moveTo(x - r*1.8, yy + a0*20); g.lineTo(x + r*1.8, yy - a0*20); g.stroke();
+    }
+    g.restore();
+    g.strokeStyle = 'rgba(10,20,50,.25)'; g.lineWidth = 1;   // the ridge where the knife lifted
+    g.beginPath(); pts.forEach(function(q,i){ g[i?'lineTo':'moveTo'](q[0],q[1]); }); g.closePath(); g.stroke();
   }
   function computeZone(av){
     var hc = av[1], wide = W >= 1024;
     if (wide && hc){ var zx = hc.x + hc.w + 20; zone = {x:zx, y:H*.12, w:Math.max(120, W - zx - 40), h:H*.78}; }
-    else { var zy = hc ? hc.y + hc.h + 10 : H*.6; zone = {x:24, y:zy, w:W-48, h:Math.max(90, H - zy - 30)}; }
+    else { var zy = hc ? hc.y + hc.h + 10 : H*.6; zone = {x:24, y:zy, w:W-48, h:Math.max(90, Math.min(H, window.innerHeight) - zy - 84)}; }   // leave room for the handle below the cover
   }
 
   // ---- the painter: a W, then straight fill strokes, like a person rolling a wall ----
@@ -579,7 +583,7 @@ var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     }
     if (job.phase === 'rest'){
       job.restT += dt; paint = false;
-      tg = [Math.min(W - L*.6, zone.x + zone.w - L*.4), zone.y + zone.h];   // parked low and to the side
+      tg = [zone.x + zone.w - L*.6, zone.y + zone.h*.4];   // parked to the side, whole tool on screen
       if (job.restT > JOB_REST){ if (live) maybeRestoreHole(); newPatch(false); }
     }
     // spring toward the plan: a small overshoot at each turn, like a wrist
@@ -687,7 +691,7 @@ var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     ctx.setTransform(1,0,0,1,0,0);
     ctx.drawImage(base, 0, 0);
     var hb = hole ? hole.box : 0, hx = hole ? Math.round((hole.x - hb/2)*D) : 0, hy = hole ? Math.round((hole.y - hb/2)*D) : 0;
-    if (hole && patchMix > 0){ ctx.globalAlpha = patchMix*.6; ctx.drawImage(patchC, hx, hy); ctx.globalAlpha = 1; }   // dried compound, a shade lighter under the coat
+    if (hole && patchMix > 0){ ctx.globalAlpha = patchMix; ctx.drawImage(patchC, hx, hy); ctx.globalAlpha = 1; }   // dried compound, a shade lighter under the coat
     tctx.globalCompositeOperation = 'copy'; tctx.drawImage(mask, 0, 0);
     tctx.globalCompositeOperation = 'source-in'; tctx.drawImage(fresh, 0, 0);
     tctx.globalCompositeOperation = 'source-over';
