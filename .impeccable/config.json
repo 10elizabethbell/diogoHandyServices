@@ -8,6 +8,48 @@
         "value": "zero-offset text-shadow glow (#0d2152)",
         "createdAt": "2026-10-19T21:40:19.979Z",
         "reason": "pitch-site finishing-rules.md requires a soft glow in the ground color so the wall's scuffs and cracks never run through hero text; it is the wall's own navy, not a chromatic accent"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "<div> \"wall\": children flush against bg on right/left (no inset)",
+        "createdAt": "2026-10-19T21:45:34.406Z",
+        "reason": "full-bleed color band; content sits in .wrap with padding clamp(16px,5vw,64px), verified in 360/390/1440 screenshots"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "<section> \"services\": children flush against bg on right/left (no inset)",
+        "createdAt": "2026-10-19T21:45:34.516Z",
+        "reason": "full-bleed color band; content sits in .wrap with padding clamp(16px,5vw,64px), verified in 360/390/1440 screenshots"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "<section> \"how\": children flush against bg on right/left (no inset)",
+        "createdAt": "2026-10-19T21:45:34.616Z",
+        "reason": "full-bleed color band; content sits in .wrap with padding clamp(16px,5vw,64px), verified in 360/390/1440 screenshots"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "<section> \"quote\": children flush against bg on right/left (no inset)",
+        "createdAt": "2026-10-19T21:45:34.720Z",
+        "reason": "full-bleed color band; content sits in .wrap with padding clamp(16px,5vw,64px), verified in 360/390/1440 screenshots"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "<section> \"close\": children flush against bg on right/left (no inset)",
+        "createdAt": "2026-10-19T21:45:34.859Z",
+        "reason": "full-bleed color band; content sits in .wrap with padding clamp(16px,5vw,64px), verified in 360/390/1440 screenshots"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "text-transform: uppercase on 33 chars of body text",
+        "createdAt": "2026-10-19T21:45:34.959Z",
+        "reason": "the owner's own flyer tagline 'RELIABLE. AFFORDABLE. DONE RIGHT.' set in his caps"
+      },
+      {
+        "rule": "overused-font",
+        "value": "primary font: roboto",
+        "createdAt": "2026-10-19T21:45:35.059Z",
+        "reason": "pitch-site house style (ellie-taste.md): system font stack; Roboto is only the Android member of that stack"
       }
     ]
   }
